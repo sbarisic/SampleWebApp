@@ -10,9 +10,19 @@
 	<link rel="stylesheet" href="content/page.css" />
 </head>
 <body>
-	<form id="form1" runat="server">
-		<div>
+	<form class="form-inline center-form" runat="server">
+		<div class="form-group mb-2">
+			<label for="staticEmail2" class="sr-only">Email</label>
+			<input type="text" readonly="readonly" class="form-control-plaintext" id="staticEmail2" value="email@example.com" />
 		</div>
+
+		<div class="form-group mx-sm-3 mb-2" runat="server">
+			<label for="inputPassword2" class="sr-only">Password</label>
+			<input type="password" class="form-control" id="inputPassword2" placeholder="Password" runat="server" />
+		</div>
+
+		<asp:Button CssClass="btn btn-primary mb-2" runat="server" OnClick="OnConfirm" Text="Confirm identity" />
+		<span id="status_label" runat="server">Success</span>
 	</form>
 
 	<script src="content/js/bootstrap.bundle.js"></script>
